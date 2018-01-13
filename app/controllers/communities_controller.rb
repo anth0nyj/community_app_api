@@ -1,16 +1,21 @@
 class CommunitiesController < ApplicationController
-  before_action :set_community, only: [:show, :update, :destroy]
+  before_action :set_community, only: [:show, :update]
+  #updating community will only be to increase number of members as people join (secret form)
+
+  #after authentication is done - need to add data for userCommunities to index route. Something like:
+
+  # userCommunities = Community.where(user_id = session_id)? 
 
   # GET /communities
   def index
     @communities = Community.all
 
-    render json: @communities
+    render json: @communities.to_json(include: :posts)
   end
 
   # GET /communities/1
   def show
-    render json: @community
+    render json: @community.to_json(include: :posts)
   end
 
   # POST /communities
@@ -18,7 +23,7 @@ class CommunitiesController < ApplicationController
     @community = Community.new(community_params)
 
     if @community.save
-      render json: @community, status: :created, location: @community
+      render json: @community, status: :created
     else
       render json: @community.errors, status: :unprocessable_entity
     end
@@ -31,11 +36,6 @@ class CommunitiesController < ApplicationController
     else
       render json: @community.errors, status: :unprocessable_entity
     end
-  end
-
-  # DELETE /communities/1
-  def destroy
-    @community.destroy
   end
 
   private
