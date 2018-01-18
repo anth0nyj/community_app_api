@@ -4,13 +4,21 @@ class CommunitiesController < ApplicationController
 
   #after authentication is done - need to add data for userCommunities to index route. Something like:
 
+<<<<<<< HEAD
+  # userCommunities = Community.where(user_id = session_id)? 
+=======
   # userCommunities = Community.where(user_id = session_id)?
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
 
   # GET /communities
   def index
     @communities = Community.all
 
+<<<<<<< HEAD
+    render json: @communities.to_json(include: :posts)
+=======
     render json: @communities.to_json(include: {posts: {include: :replies} })
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
   end
 
   # GET /communities/1

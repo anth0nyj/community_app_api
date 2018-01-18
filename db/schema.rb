@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_01_12_211318) do
+=======
 ActiveRecord::Schema.define(version: 2018_01_13_225154) do
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +42,11 @@ ActiveRecord::Schema.define(version: 2018_01_13_225154) do
 
   create_table "communities", force: :cascade do |t|
     t.string "name"
+<<<<<<< HEAD
+    t.integer "num_of_members"
+=======
     t.integer "num_of_member"
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,7 +79,11 @@ ActiveRecord::Schema.define(version: 2018_01_13_225154) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
+<<<<<<< HEAD
+    t.string "password"
+=======
     t.string "password_digest"
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

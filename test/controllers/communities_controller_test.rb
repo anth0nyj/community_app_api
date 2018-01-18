@@ -12,7 +12,11 @@ class CommunitiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create community" do
     assert_difference('Community.count') do
+<<<<<<< HEAD
+      post communities_url, params: { community: { name: @community.name, num_of_members: @community.num_of_members } }, as: :json
+=======
       post communities_url, params: { community: { name: @community.name, num_of_member: @community.num_of_member } }, as: :json
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
     end
 
     assert_response 201
@@ -24,7 +28,11 @@ class CommunitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update community" do
+<<<<<<< HEAD
+    patch community_url(@community), params: { community: { name: @community.name, num_of_members: @community.num_of_members } }, as: :json
+=======
     patch community_url(@community), params: { community: { name: @community.name, num_of_member: @community.num_of_member } }, as: :json
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
     assert_response 200
   end
 

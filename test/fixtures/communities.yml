@@ -2,8 +2,16 @@
 
 one:
   name: MyString
+<<<<<<< HEAD
+  num_of_members: 1
+
+two:
+  name: MyString
+  num_of_members: 1
+=======
   num_of_member: 1
 
 two:
   name: MyString
   num_of_member: 1
+>>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
