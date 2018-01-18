@@ -43,10 +43,7 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     awesome_print (1.8.0)
-<<<<<<< HEAD
-=======
     bcrypt (3.1.11)
->>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
     bootsnap (1.1.8)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -141,10 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-<<<<<<< HEAD
-=======
   bcrypt (~> 3.1.7)
->>>>>>> 6e72e3bd5188a91cf1268ac35f342f08c39afebf
   bootsnap (>= 1.1.0)
   byebug
   dotenv-rails
@@ -162,4 +156,4 @@ RUBY VERSION
    ruby 2.4.3p205
 
 BUNDLED WITH
-   1.16.1
+   1.15.2
